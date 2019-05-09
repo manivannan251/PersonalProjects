@@ -1,5 +1,9 @@
 package generics;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class GenericsDemo2<T extends Number> {
 
 	public static void main(String[] args) {
@@ -8,6 +12,8 @@ public class GenericsDemo2<T extends Number> {
 		GenericsDemo2<Integer> gen = new GenericsDemo2<Integer>();
 		GenericsDemo2<Float> gen2 = new GenericsDemo2<Float>();
 		//GenericsDemo2<String> gen3 = new GenericsDemo2<String>();
+		List<String> l = new ArrayList<>(10);
+		
 
 	}
 

@@ -11,6 +11,7 @@ public class OuterClassDemo {
 	public static void main(String[] args) {
 		OuterClassDemo o = new OuterClassDemo();
 		OuterClassDemo.Inner i = o.new Inner();
+		i.m1();
 
 	}
 
