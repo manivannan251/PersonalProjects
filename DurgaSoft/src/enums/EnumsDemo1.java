@@ -1,7 +1,4 @@
 package enums;
-enum Beer {
-	KF, RC, KO
-}
 public class EnumsDemo1 {
 
 	public static void main(String[] args) {
