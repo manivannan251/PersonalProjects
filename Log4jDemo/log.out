@@ -1,0 +1,15 @@
+2019-09-02 13:19:35 WARN Log4jDemoProgram:12 - Warn Message!
+2019-09-02 13:19:35 ERROR Log4jDemoProgram:13 - Error Message!
+2019-09-02 13:19:35 FATAL Log4jDemoProgram:14 - Fatal Message!
+2019-09-02 13:19:54 WARN Log4jDemoProgram:12 - Warn Message!
+2019-09-02 13:19:54 ERROR Log4jDemoProgram:13 - Error Message!
+2019-09-02 13:19:54 FATAL Log4jDemoProgram:14 - Fatal Message!
+2019-09-02 13:20:48 WARN  Log4jDemoProgram:12 - Warn Message!
+2019-09-02 13:20:48 ERROR Log4jDemoProgram:13 - Error Message!
+2019-09-02 13:20:48 FATAL Log4jDemoProgram:14 - Fatal Message!
+2019-09-02 13:21:59 TRACE Log4jDemoProgram:9 - Trace Message!
+2019-09-02 13:21:59 DEBUG Log4jDemoProgram:10 - Debug Message!
+2019-09-02 13:21:59 INFO  Log4jDemoProgram:11 - Info Message!
+2019-09-02 13:21:59 WARN  Log4jDemoProgram:12 - Warn Message!
+2019-09-02 13:21:59 ERROR Log4jDemoProgram:13 - Error Message!
+2019-09-02 13:21:59 FATAL Log4jDemoProgram:14 - Fatal Message!

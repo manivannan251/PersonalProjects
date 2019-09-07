@@ -22,11 +22,12 @@ public class ConcurrentModificationExceptionDemo {
 			String value = it.next();
 			
 			if (value.equals("3"))
-				//myList.remove(value);
-				it.remove();
+				myList.remove(value);
+				//it.remove();
 			System.out.println("List Value:" + value);
 		}
 		System.out.println(myList);
+		//List.cr
 
 	}
 
