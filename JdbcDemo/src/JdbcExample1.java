@@ -9,8 +9,12 @@ public class JdbcExample1 {
 	public static void main(String[] args) throws SQLException {
 		// TODO Auto-generated method stub
 		
-		Connection con=DriverManager.getConnection(  
-				"jdbc:oracle:thin:@localhost:1521:xe","store","123"); 
+		
+		  Connection con=DriverManager.getConnection(
+		  "jdbc:oracle:thin:@localhost:1521:xe","store","123");
+		  
+		
+		
 		
 		Statement stmt=con.createStatement();  
 		  
