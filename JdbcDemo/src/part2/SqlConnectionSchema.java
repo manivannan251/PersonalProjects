@@ -10,7 +10,7 @@ public class SqlConnectionSchema {
 	
 	public SqlConnectionSchema(String schema) {
 		jdbcUrl="jdbc:oracle:thin:@localhost:1521:xe";
-		if(schema.equalsIgnoreCase("sore")) {
+		if(schema.equalsIgnoreCase("store")) {
 			userName="store";
 			pwd="123";
 		}

@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 public class B extends A {
 	
-	public void m1() {
+	public void m1() throws ClassCastException{
 		System.out.println("Inside b class m1");
 	}
 	
