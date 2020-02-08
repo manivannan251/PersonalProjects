@@ -1,8 +1,12 @@
 package enums;
+
+import java.util.InputMismatchException;
+
 enum Color {
 	BLUE,RED,GREEN;
-	public void info() {
+	public void info()  {
 		System.out.println("Dangerous color");
+		throw new InputMismatchException("hello");
 	}
 }
 public class EnumCommonMethodDemo {
@@ -12,7 +16,11 @@ public class EnumCommonMethodDemo {
 		for(Color c1:color) {
 			c1.info();
 		}
-
+		
+		
+		int a=2;
+		if((Integer)a==null)
+			throw new NullPointerException();
 	}
 
 }

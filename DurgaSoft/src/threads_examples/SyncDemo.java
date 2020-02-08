@@ -1,6 +1,6 @@
 package threads_examples;
 class Display {
-	public synchronized void wish(String name) {
+	public void wish(String name) {
 		for(int i=0;i<10;i++) {
 			System.out.print("Good Morning : ");
 			try {

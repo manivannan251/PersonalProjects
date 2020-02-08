@@ -18,8 +18,10 @@ public class HelloWorld {
         String strUnEscapeHTML = StringEscapeUtils.unescapeHtml(strEscapeHTML);
         System.out.println("Escaped HTML >>> " + strEscapeHTML);
         System.out.println("UnEscaped HTML >>> " + strUnEscapeHTML);*/
-		Joiner joiner = Joiner.on("; ").skipNulls();
-		System.out.println(joiner.join("Harry", null,"Ron", "Hermonies"));
+		List<String> li=new ArrayList<String>();
+		li.add("10");
+		Integer c = Integer.parseInt(li.get(0));
+		System.out.println(c);
 		
 	}
 
