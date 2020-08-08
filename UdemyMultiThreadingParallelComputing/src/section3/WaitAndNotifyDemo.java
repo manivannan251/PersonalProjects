@@ -10,7 +10,7 @@ class Processor {
 	}
 	
 	public void consume() throws InterruptedException {
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		synchronized (this) {
 			System.out.println("Inside consume method");
 			notify();
@@ -54,6 +54,7 @@ public class WaitAndNotifyDemo {
 		
 		t1.start();
 		t2.start();
+		//t1.start();
 		
 		try {
 			t1.join();
