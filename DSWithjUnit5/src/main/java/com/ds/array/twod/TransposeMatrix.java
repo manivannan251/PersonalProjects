@@ -1,4 +1,4 @@
-package com.array.twod;
+package com.ds.array.twod;
 
 public class TransposeMatrix {
 	

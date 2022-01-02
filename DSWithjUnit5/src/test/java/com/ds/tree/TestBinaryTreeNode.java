@@ -1,6 +1,8 @@
 package com.ds.tree;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -15,7 +17,7 @@ public class TestBinaryTreeNode {
 		node.add(3);
 		//node.setLeft(new Node(2));
 		//node.setRight(new Node(3));
-		List<Integer> exp = List.of(1,0,2,3);
+		List<Integer> exp = Stream.of(1,0,2,3).collect(Collectors.toList());
 		List<Integer> act = node.preOrder();
 		Assertions.assertEquals(exp, act);
 	}
@@ -28,7 +30,7 @@ public class TestBinaryTreeNode {
 		node.add(5);
 		//node.setLeft(new Node(2));
 		//node.setRight(new Node(3));
-		List<Integer> exp = List.of(1,0,2,5);
+		List<Integer> exp = Stream.of(1,0,2,5).collect(Collectors.toList());
 		List<Integer> act = node.preOrder();
 		Assertions.assertEquals(exp, act);
 	}
@@ -42,7 +44,7 @@ public class TestBinaryTreeNode {
 		node.add(7);
 		//node.setLeft(new Node(2));
 		//node.setRight(new Node(3));
-		List<Integer> exp = List.of(5,0,2,7);
+		List<Integer> exp = Stream.of(5,0,2,7).collect(Collectors.toList());
 		List<Integer> act = node.preOrder();
 		Assertions.assertEquals(exp, act);
 	}
@@ -56,7 +58,7 @@ public class TestBinaryTreeNode {
 		node.add(5);node.add(6);node.add(7);
 		//node.setLeft(new Node(2));
 		//node.setRight(new Node(3));
-		List<Integer> exp = List.of(1,2,4,5,3,6,7);
+		List<Integer> exp = Stream.of(1,2,4,5,3,6,7).collect(Collectors.toList());
 		List<Integer> act = node.preOrder();
 		
 		Assertions.assertEquals(7, node.getMaximum());

@@ -10,5 +10,7 @@ public interface ILinkedList<T> {
 	
 	public void traverse();
 	
+	public T getMiddleNode();
+	
 	
 }
