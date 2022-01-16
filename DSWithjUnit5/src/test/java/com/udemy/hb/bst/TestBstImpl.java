@@ -130,4 +130,35 @@ public class TestBstImpl {
 		Assertions.assertEquals(4, tree.size());
 		
 	}
+	
+	@Test
+	public void testBstCompare() {
+		BstNode<Integer> node1 = new BstNode<Integer>(50);
+		
+		node1.setRight(new BstNode<Integer>(30));		
+		
+		BstTreeImpl<Integer> tree2 = new BstTreeImpl<Integer>();
+		
+		BstNode<Integer> node2 = new BstNode<Integer>(50);
+		
+		node2.setRight(new BstNode<Integer>(30));	
+		boolean val = BstNodeTreeOperations.compareTrees(node1, node2);
+		Assertions.assertTrue(val);
+		
+	}
+	
+	@Test
+	public void testBstCompare2() {
+		BstNode<Integer> node1 = new BstNode<Integer>(30);
+		
+		node1.setRight(new BstNode<Integer>(50));		
+		
+		
+		BstNode<Integer> node2 = new BstNode<Integer>(50);
+		
+		node2.setRight(new BstNode<Integer>(30));	
+		boolean val = BstNodeTreeOperations.compareTrees(node1, node2);
+		Assertions.assertFalse(val);
+		
+	}
 }

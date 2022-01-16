@@ -92,4 +92,64 @@ public class TestArrProblems {
 		int[] act = ArrProblems.findProductOptimized(arr1);
 		Assertions.assertArrayEquals(act, exp);
 	}
+	
+	
+	@Test
+	public void testfindMinimu() {
+		int[] arr1 = {9, 2, 3, 6};
+		int min = ArrProblems.findMinimumValue(arr1);
+		Assertions.assertEquals(2, min);
+	}
+	
+	@Test
+	public void testfindFirstUnique() {
+		int[] arr1 = {9, 2, 3, 2, 6, 6};
+		int min = ArrProblems.findFirstUnique(arr1);
+		Assertions.assertEquals(9, min);
+	}
+	
+	@Test
+	public void testfindFirstUnique2() {
+		int[] arr1 = {9, 2, 3, 2, 6, 6,9};
+		int min = ArrProblems.findFirstUnique(arr1);
+		Assertions.assertEquals(3, min);
+	}
+	
+	
+	@Test
+	public void testfindFirstUnique3() {
+		int[] arr1 = {9, 2, 3, 2, 6, 6,9,3};
+		int min = ArrProblems.findFirstUnique(arr1);
+		Assertions.assertEquals(-1, min);
+	}
+	
+	@Test
+	public void testfindFirstUnique4() {
+		int[] arr1 = {4,4,4,3};
+		int min = ArrProblems.findFirstUnique(arr1);
+		Assertions.assertEquals(3, min);
+	}
+	
+	@Test
+	public void testfindSecondLargest() {
+		int[] arr1 = {9,2,3,6};
+		int min = ArrProblems.findSecondLargest(arr1);
+		Assertions.assertEquals(6, min);
+	}
+	
+	
+	@Test
+	public void testfindSecondLargest2() {
+		int[] arr1 = {2,4};
+		int min = ArrProblems.findSecondLargest(arr1);
+		Assertions.assertEquals(2, min);
+	}
+	
+	@Test
+	public void testrotateArray() {
+		int[] arr1 = {1, 2, 3, 4, 5};
+		int[] exp = {5, 1, 2, 3, 4};
+		ArrProblems.rotateArray(arr1);
+		Assertions.assertArrayEquals(arr1, exp);
+	}
 }

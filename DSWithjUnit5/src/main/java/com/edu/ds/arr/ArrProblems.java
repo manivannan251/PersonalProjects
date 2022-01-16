@@ -1,5 +1,6 @@
 package com.edu.ds.arr;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
@@ -86,5 +87,71 @@ public class ArrProblems {
 				result[i] = left[i] * right[i];
 			}
 			return result;
+		}
+		
+		public static int findMinimumValue(int[] arr) {
+			int min = arr[0];
+			for(int i=0;i<arr.length;i++) {
+				if(arr[i]<min)
+					min=arr[i];
+			}
+			return min;
+		}
+		
+		public static int findFirstUnique(int[] arr) {
+			int result = -1;
+			
+			//Arrays.sort(arr);
+			for(int i=0;i<arr.length;i++) {
+				int temp = arr[i];
+				boolean found = false;
+				for(int j=arr.length-1;j>=0;j--) {
+					if(i==j)
+						continue;
+					if(arr[j]==temp) {
+						found = true;
+					}
+						
+				}
+				if(!found) {
+					result = arr[i];
+					break;
+				}
+			}
+			return result;
+		} 
+		
+		public static int findSecondLargest(int[] arr) {
+			if(arr.length<2)
+				return -1;
+			if(arr.length==2) {
+				return arr[0]>arr[1]?arr[1]:arr[0];
+			}
+			int first = arr[0];
+			int second = arr[1];
+			
+			for(int i=2;i<arr.length;i++) {
+				if(arr[i]>first) {
+					second = first;
+					first = arr[i];
+				}
+				else if(arr[i]>second) {
+					second = arr[i];
+				}
+			}
+			
+			return second;
+		}
+		
+		public static void rotateArray(int[] arr) {
+			int[] temp = new int[arr.length];
+			int first = arr[arr.length-1];
+			for(int i=1;i<arr.length;i++) {
+				temp[i]=arr[i-1];
+			}
+			temp[0]=first;
+			for(int i=0;i<arr.length;i++) {
+				arr[i]=temp[i];
+			}
 		}
 }
