@@ -1,0 +1,77 @@
+Trim can be used to remove only one charecter
+
+select trim('                 My Name is Adam                   ') from dual;
+
+--output---
+My Name is Adam
+
+select trim(' ' from '                My Name is Adam                      ') from dual;
+
+
+select trim(BOTH ' ' from '                My Name is Adam                      ') from dual;
+
+
+select trim(LEADING ' ' from '                My Name is Adam                      ') from dual;
+
+
+
+select trim(TRAILING ' ' from '                My Name is Adam                      ') from dual;
+
+
+select trim(TRAILING 'm' from '                My Name is Adam                      ') from dual;  ----The last charecter is space 
+
+
+select trim(TRAILING 'm' from ' My Name is Adam') from dual;
+
+
+select trim(TRAILING 'm' from ' My Name is Adammmmmmmmmmmmmmmmmmmmmmmmmmmm') from dual;
+
+
+select trim(LEADING 'm' from 'my Name is Adammmmmmmmmmmmmmmmmmmmmmmmmmmm') from dual;
+
+
+select trim(BOTH 'm' from 'my Name is Adammmmmmmmmmmmmmmmmmmmmmmmmmmm') trimmed_text from dual;
+
+
+select trim( 'm' from 'my Name is Adammmmmmmmmmmmmmmmmmmmmmmmmmmm') trimmed_text from dual;
+
+
+select trim( 'm' from 'my Name is Ada') trimmed_text from dual;
+
+select trim( TRAILING 'm' from 'my Name is Ada') trimmed_text from dual;
+
+
+
+select trim( TRAILING 'my' from 'my Name is Ada') trimmed_text from dual; --gives error saying trim set should have only one parameter
+
+
+
+LTRIM and RTRIM can be cosidered as subset of trim
+
+
+select ltrim( '       my Name is Adam            ') trimmed_text from dual; -- trims the space before the string
+
+
+select ltrim( 'my Name is Adam','my') trimmed_text from dual;
+
+--output is
+ Name is Adam
+
+
+select rtrim( 'my Name is Adam','my') trimmed_text from dual; --trims the charecter individually if it finds 
+
+--o/p----
+my Name is Ada
+
+
+
+select rtrim( 'my Name is Adammmmmmmmmmmmmmmm','my') trimmed_text from dual;
+
+--o/p----
+my Name is Ada
+
+
+
+Display only the string yourwebsitename from string www.yourwebsitename.com
+
+select rtrim(ltrim('www.yourwebsitename.com','w.'),'.com') from dual;

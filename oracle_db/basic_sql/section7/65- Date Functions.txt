@@ -1,0 +1,41 @@
+1) SYSDATE - returns the curr date and time of OS where db is installed
+2) CURRENT_DATE - returns the date and time of the place where the user's session is logged in from
+3) SESSIONTIMEZONE - returns timezone of user's session
+4) SYSTIMESTAMP - returns the date and time of the database and retruns fractional seconds along with timezone
+5) CURRENT_TIMESTAMP - returns the curent date and time from user's session and fractional seconds along with timezone
+
+select current_date,sysdate,sessiontimezone,current_timestamp,systimestamp from dual;
+
+o/p from office db
+
+current_date             sysdate             sesstimezone   current_timestamp
+06/05/2021 10:51:06PM	06/05/2021 1:21:06PM +05:30	   06/05/2021 10:51:06.093000000 PM +05:30
+         systimestamp
+	06/05/2021 1:21:06.093000000 PM +04:00
+
+
+Arithmetic Operations with date
+1) Since Oracle stores date as numbers internally we can add or subtract a number on date and the result will also be a date
+
+select sysdate,sysdate+3 from dual;
+o/p
+sysdate  sysdate+3
+05-06-21  08-06-21
+
+if we need to add 1 hour 
+select sysdate,sysdate+1/24 from dual;
+o/p
+sysdate  	   sysdate+1/24
+05-06-21 23:18:14  06-06-21 00:18:14
+
+
+if we need to add 1 minute
+select sysdate,sysdate+1/(24*60) from dual;
+o/p
+sysdate  	   sysdate+1/24
+05-06-21 23:19:22  05-06-21 23:20:22
+
+2) subtracting two dates returns the nuber of days between them
+select employee_id,hire_date,sysdate,trunc(sysdate-hire_date) working_days from employees;
+
+select employee_id,hire_date,sysdate,trunc((sysdate-hire_date)/365) working_years from employees order by working_years desc;

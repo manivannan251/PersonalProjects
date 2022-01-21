@@ -1,0 +1,57 @@
+Date Manipulation Functions
+
+1) ADD_MONTHS(date,n) - Add months to date
+eg:
+ADD_MONTHS('18-SEP-23',3)
+o/p:
+18-DEC-23
+
+ADD_MONTHS('18-SEP-23',-3),ADD_MONTHS('18-SEP-23',30)
+select add_months('18{sep-23',-3) from dual;  --We can put any delimiter or without that oracle formats the date value since it expects a date value
+
+2) MONTHS_BETWEEN(date1,date2) - Number of months between 2 dates
+eg:
+MONTHS_BETWEEN('03-SEP-20','18-FEB-20')
+o/p:
+6.561
+
+3) ROUND(date[,format]) - Rounds a date/time value to specified element
+eg:
+select round(sysdate+20,'MONTH') from dual;
+o/p:
+round(sysdate+20,'MONTH')
+01-07-21 00:00:00  Since the day is 20 days in June it rounds to 1st of next month
+
+eg:
+select round(sysdate,'MONTH') from dual;
+o/p:
+round(sysdate,'MONTH')
+01-06-21 00:00:00  Since the day is 6 days in June it rounds to 1st of current month
+
+We can also perform with hour minutes and seconds
+
+4) TRUNC(date[,format]) - Trunactes a date/time to specified value
+eg:
+select employee_id,hire_date,trunc(hire_date,'MONTH') truncated_date,round(hire_date,'MONTH') round_date from employees;
+o/p:
+ID       HIRE_DATE               TRUNCATED_DATE          ROUND_DATE
+198	21-06-07 00:00:00	01-06-07 00:00:00	01-07-07 00:00:00
+
+5) EXTRACT(date_component from date) - extracts a specific time component from date
+eg:
+extract (month from sysdate)
+o/p:
+6
+
+6) NEXT_DAY(date,day_of_week) - Returns the date of the next specified weekday
+eg:
+NEXT_DAY('04-JUN-20','TUESDAY')
+o/p:
+09-JUN-20
+
+7) LAST_DAY(date) - Returns the last day of the month
+LAST_DAY('04-JUL-20')
+o/p:
+31-JUL-20
+
+

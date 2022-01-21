@@ -1,0 +1,3 @@
+select employee_id,hire_date,hire_date+5 from employees;
+
+select salary,salary*commission_pct,commission_pct from employees;

@@ -1,0 +1,30 @@
+1) Converts the NUMBER or DATE to the VARCHAR2 data type in specific format model
+eg:
+TO_CHAR(date|number,[format_model],[nls_parameter])
+
+date|number - This is the value to be converted
+format_model - the input value is converted to VARCHAR2 data type in this specified format uses default
+nls_parameter - Specifies the language for names and abbreviations of the days and months. Uses default
+
+eg:
+select first_name,last_name,to_char(hire_date,'YYYY') from employees where TO_CHAR(employee_id)='101';
+o/p
+Neena	Kochhar	2005
+
+Date Format Models
+
+YYYY - Four Digit rep of year (2021) 
+RR-YY - The last two digits of year (96) 
+YEAR - Full spelling of year in English (Twenty twenty-one)
+MM - Two digits of Month (11) 
+MON - Three letter rep of month (SEP)
+MONTH - Full Name of month in English (SEPTEMBER)
+DD - Numeric day of the month (27) 
+DY - Three Letter rep of days of week (SAT)
+DAY - Full names of the days of the week in English ("SATURDAY')
+HH (HH12-HH24) - Two digit hour in 12-24 format (07)(22)
+MI - Two digit minute (48)
+SS - Two digit second (52)
+TH - Ordinal Number (DDTH -> 5th)
+SP - The spelling of number (DDSP -> FOUR)
+SPTH or THSP - The spelling of ordinal number (DDSPTH -> FOURTH)

@@ -1,0 +1,23 @@
+Number format models are used with the TO_CHAR function to display the numeric values in different formats
+
+Number format Models       Meaning
+    9 			Specifies the number of digits
+    0 			Specifies leading or trailing zeroes
+    $			Adds a dollar sign
+    L			Displays local currency symbol
+    .			Displays a decimal point
+    , 			Displays comma as an indicator
+
+
+eg:
+select to_char(salary,'$99,999.99'),salary from employees;
+o/p
+to_char(salary,'S99,999.99') salary
+  $2,600.00	2600
+
+
+
+select to_char(salary,'L99,999.99'),salary from employees;
+o/p
+to_char(salary,'S99,999.99') salary
+  Rs2,600.00	2600

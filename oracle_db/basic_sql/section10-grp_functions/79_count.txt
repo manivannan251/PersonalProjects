@@ -1,0 +1,8 @@
+
+count(*) counts the null values but if we use it wih specific column null values are ignored
+
+
+select count(*),count(manager_id),count(ALL manager_id),count(DISTINCT manager_id) from employees;
+
+
+select count(*),count(commission_pct),count(distinct commission_pct),count(distinct nvl(commission_pct,0)) from employees;

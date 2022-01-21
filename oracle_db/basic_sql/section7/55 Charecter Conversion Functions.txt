@@ -1,0 +1,5 @@
+select first_name,UPPER(first_name),last_name,LOWER(last_name),email,INITCAP(email) from employees;
+
+select first_name,UPPER(first_name),last_name,LOWER(last_name),email,INITCAP(email),UPPER('bmw i8') from employees where job_id='IT_PROG';
+
+select * from employees where UPPER(last_name)='KING';

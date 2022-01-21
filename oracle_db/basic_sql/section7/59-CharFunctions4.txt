@@ -1,0 +1,26 @@
+select first_name,replace(first_name,'a') replaced_string from employees;   
+Will remove all a in the result if we don't mention replacement string
+
+select first_name,replace(first_name,'a','-') rep_string from employees;
+replaces all the occurences of a in the string with -
+
+select first_name,replace(first_name,'le','-') rep_string from employees;
+Replaces the exact match of le with -
+
+
+lpad(string,targ_length,pad) where targ_length is the resultant string length after padding
+select lpad('sql',10,'-') from dual;
+o/p
+-------sql
+
+
+select rpad('sql',10,'-') from dual;
+o/p
+sql-------
+
+If the targ_length is less than the input string it will truncate the input string
+
+select rpad('sql',2,'-') from dual;
+o/p
+sq
+

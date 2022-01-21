@@ -1,0 +1,22 @@
+select first_name,last_name,job_id,salary,
+    case job_id when 'ST_MAN' then salary*1.20
+                when 'SH_MAN' then salary*1.30
+                else salary end "updated_salary"
+                from employees;
+
+
+select first_name,last_name,job_id,salary from employees where (
+        case 
+            when job_id = 'IT_PROG' 
+            and salary > 5000 then 1
+            when job_id = 'SA_MAN'
+            and salary > 10000 then 1
+            else 0
+            end) = 1;
+
+
+
+select first_name,last_name,job_id,salary,
+        decode(job_id,'ST_MAN',salary*1.20,
+                      'SH_MAN',salary*1.30,
+                      salary) "updated_salary"  from employees;

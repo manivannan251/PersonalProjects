@@ -1,0 +1,36 @@
+1) Oracle Conversion Function converst one data type to another
+2) Can be Implicit Data Type Conversion or Explicit Type Conversion
+3) Implicit Conversion type oracle does it internally
+
+Implicit Data Type Conversion
+1) A VARCHAR2 or CHAR value is converted to a number or a date by the Oracle Server automatically
+2) A NUMBER or a DATE is automatically converted to char data by oracle server
+3) The implicit conversions are performed only if the charecters match with a valid number or date
+
+implicit conversion from varchar2 value to a number value
+select * from employees where salary > '5000';
+
+
+implicit conversion from varchar2 value to a date value
+select * from employees where hire_date = '17-jun-03';
+
+implicit conversion from number value to a varchar2 value
+select department_id||' '||department_name from departments;
+
+
+implicit conversion from datevalue to a varchar2 value
+select first_name || sysdate from employees;
+
+
+implicit conversion is not recommended since it occupies cpu cycles
+
+in oracle select statements it checks the column data type and the assigned value if it can convert to column data type it converts implicitly
+
+
+Explicit Data Type Conversion
+Used for converting data type of value to another data type explicitly
+2) 3 functions provided by oracle
+	to_CHAR()
+	TO_NUMBER()
+	TO_DATE()
+

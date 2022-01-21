@@ -1,0 +1,6 @@
+1) Funtions can be nested with each other
+2) are evaluated from innermost to outermost one
+
+select first_name,last_name,lpad(upper(concat(first_name,Last_name)),20,'*') from employees;
+
+

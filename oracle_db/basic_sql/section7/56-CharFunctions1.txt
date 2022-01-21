@@ -1,0 +1,13 @@
+select substr('Sql Course',5,2) from dual; In sql numbering starts from 1 instead of 0
+
+--o/p--
+Co
+
+select first_name,substr(first_name,3,6),substr(first_name,3),last_name,length(last_name) from employees;
+
+select concat(first_name,last_name) from employees;
+
+select concat(concat(first_name,last_name),employee_id) from employees;
+
+It is easier to use conct operator instead of concat functions
+select first_name||last_name||employee_id from employees;

@@ -1,0 +1,5 @@
+select * from employees order by first_name desc,salary desc;
+
+select employee_id,first_name,last_name, salary s from employees order by 2 desc, s desc;  --Use alias or column order with ascending or descending
+
+select first_name, last_name,commission_pct from employees order by commission_pct;  --null values come last when we sort by ascending values

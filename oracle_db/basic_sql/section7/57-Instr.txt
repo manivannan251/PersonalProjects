@@ -1,0 +1,14 @@
+select instr('I am learning how to use functions in Oracle','o') from dual;
+
+select instr('I am learning how to use functions in Oracle','o',17) from dual;
+
+select instr('I am learning how to use functions in Oracle','o',1,3) from dual;
+
+
+select instr('I am learning how to use functions in Oracle','o',-1,3) from dual;
+
+select instr('I am learning how to use functions in Oracle','in',-1,1) from dual;
+
+select instr('I am learning how to use functions in Oracle','in',1,1) from dual;
+
+select first_name,instr(first_name,'a') from employees; --case sensitive

@@ -1,0 +1,32 @@
+
+1) ROUND- Takes a number and rounds it to specified number of places
+ROUND(number[,decimal])
+eg:
+ROUND(12.136,2) 
+o/p
+12.14
+
+2) TRUNC - Truncates values to specified number of places
+TRUNC(number[,decimal])
+eg:
+TRUNC(12.136,2) 
+o/p
+12.13
+
+3) CEIL - Returns the smallest integer number greater than or equal to 
+a specified number
+
+CEIL(number)
+eg:
+CEIL(2.67)
+o/p
+3
+
+
+4) MOD - Returns the remainder of division
+MOD(m,n)
+eg:
+MOD(8,5)
+o/p
+3
+

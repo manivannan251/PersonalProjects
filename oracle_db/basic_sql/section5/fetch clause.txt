@@ -1,0 +1,12 @@
+select first_name,last_name,job_id,salary
+from employees
+order by salary desc 
+offset 1 row
+fetch first 10 rows only;
+
+
+select first_name,last_name,job_id,salary
+from employees
+order by salary desc 
+offset 1 row
+fetch first 10 rows with ties;

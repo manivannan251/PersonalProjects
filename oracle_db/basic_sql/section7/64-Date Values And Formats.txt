@@ -1,0 +1,15 @@
+1) Date is the main data type used in Oracle for storing date values
+2) Oracle DB stores date value in internal numeric format.It is a seven byte number
+that contains the century, year, month, day, and hour, min, second
+3) We can represent date in many diff formats like 'DD-MON-RR', 'DD-MM-YY'
+and 'DD/MM/YYYY' with 'DD-MON-RR' as default
+4) DD-Day,Mon-Month in 3 letters,YYYY-year like 2021
+5) HH - hour, HH24 in 24 hours, MI - minutes and SS-seconds, FF-Fractional Seconds
+6) if we don't write HH24 we should write AM or PM
+7) YY - represents last 2 digits in year
+8) RR - date format is diff time format elements that allows us to show
+20th century dates in 21st century using only 2 digits
+9) Date - standard data type that stores data values in oracle including time
+10) TIMESTAMP - extension of date data type storing also fractional seconds
+11) TIMESTAMP with TIME ZONE - stores timezone along with timezone like +2
+12) TIMESTAMP with LOCAL TIME ZONE - stored timezone is databse timezone
