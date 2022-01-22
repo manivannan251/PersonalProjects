@@ -1,0 +1,3 @@
+select bonus,count(*),max(salary) from employee 
+where birthdate < to_date('01-01-95')
+group by bonus;

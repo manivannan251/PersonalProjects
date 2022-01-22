@@ -1,0 +1,2 @@
+select count(*) "total employees",sum(salary) as totalsalary,avg(salary) as avgsalary,sum(salary)/count(*) as avgsalwithfunc from employee 
+where department_id=1;
