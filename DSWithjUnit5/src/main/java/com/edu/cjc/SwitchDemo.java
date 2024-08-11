@@ -33,7 +33,7 @@ public class SwitchDemo {
         // Store your final result in the variable answer
         
         /* You do not need to worry too much about the return statement for the 
-        moment and just set the value of “answer” correctly*/
+        moment and just set the value of answer correctly*/
 
         return answer;
     }
