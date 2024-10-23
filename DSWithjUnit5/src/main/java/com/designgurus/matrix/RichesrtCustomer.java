@@ -20,16 +20,16 @@ Justification: Total wealth for each customer is [3, 7, 11]. Maximum of these is
  */
 public class RichesrtCustomer {
 
-    public static int getRichestCustomer(int[][] num) {
-        int count = 0;
-        for(int i=-0;i< num.length;i++) {
+    public static int getRichestCustomer(int[][] accounts) {
+        int maxWealth = 0;
+        for(int i=-0;i< accounts.length;i++) {
             int count2 = 0;
-            for(int j=0;j<num[i].length;j++) {
-                count2 = count2+num[i][j];
+            for(int j=0;j<accounts[i].length;j++) {
+                count2 = count2+accounts[i][j];
             }
-            if(count2>count)
-                count=count2;
+            if(count2>maxWealth)
+                maxWealth=count2;
         }
-        return count;
+        return maxWealth;
     }
 }
