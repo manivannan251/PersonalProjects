@@ -92,5 +92,38 @@ class StreamInterviewQuestionTest {
         Assertions.assertEquals(2,booleanListMap.get(Boolean.FALSE).size());
     }
 
+    //second highest salary
+    @Test
+    void secondHighestSalary() {
+        Optional<EmployeeObject> employeeObjectOptional = getEmployeeList().stream().sorted(Comparator.comparingDouble(EmployeeObject::getEmp_salary).reversed())
+                .skip(1).limit(1).findFirst();
+        Assertions.assertEquals("Linga",employeeObjectOptional.get().getEmp_name());
+    }
+
+    //total salary expenditure
+    @Test
+    void totalSalaryExpenditure() {
+        Double totSalary = getEmployeeList().stream().mapToDouble(EmployeeObject::getEmp_salary).sum();
+        Assertions.assertEquals(397900,totSalary);
+    }
+
+    @Test
+    void printReverseOrderByAgeAndName() {
+        List<EmployeeObject> employeeList = getEmployeeList().stream().
+                sorted((e1,e2)->{
+                    return e1.getEmp_age()- e2.getEmp_age() == 0 ? e1.getEmp_name().compareTo(e2.getEmp_name()) : e1.getEmp_age()- e2.getEmp_age();
+                })
+                .collect(Collectors.toList());
+        employeeList.forEach(System.out::println);
+    }
+
+    @Test
+    //minimum age in each department
+    void printMinimumAgeDepartment() {
+        Map<String,Optional<EmployeeObject>> minAgeByDepartment = getEmployeeList().stream().collect(Collectors.groupingBy(EmployeeObject::getEmp_dep,
+                Collectors.minBy(Comparator.comparingInt(EmployeeObject::getEmp_age))));
+        minAgeByDepartment.forEach((k,v)->System.out.println(k+" -"+v.get().getEmp_name()));
+    }
+
 
 }
